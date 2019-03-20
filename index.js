@@ -2,8 +2,8 @@ const express = require('express')
 const app = express()
 
 app.get('*', (req, res) => {
-    res.write('<h1><marquee direction=right>Hello from Express path `/` on Now 2.0!</marquee></h1>')
-    res.write('<h2>Go to <a href="/about">/about</a></h2>')
+    res.setHeader("Content-Type", "text/html; charset=utf-8")
+    res.write(`<pre>${JSON.stringify({query: req.query, params: req.params}, null, 2)}</pre>`)
     res.end()
 })
 
