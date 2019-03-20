@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "name": "echo-params",
+  "builds": [
+    {
+      "src": "**/*.js",
+      "use": "@now/node"
+    }
+  ]
+}
